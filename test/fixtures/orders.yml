@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  protein: MyString
+  beans: false
+  rice: false
+  FajitaVeggies: MyString
+  FreshTomatoSalsa: MyString
+
+two:
+  protein: MyString
+  beans: false
+  rice: false
+  FajitaVeggies: MyString
+  FreshTomatoSalsa: MyString

@@ -1,0 +1,50 @@
+<h1>Edit Order</h1>
+
+<%= form_for @order do |order| %>
+
+	<div>
+		<%= order.label :orderstyle, "Order Style" %>
+		<%= order.select :orderstyle, ["burrito", "salad", "tacos", "bowl"] %>
+	</div>
+
+	<div>
+		<%= order.label :protein, "Protein" %>
+		<%= order.select :protein, ["chicken", "steak", "fish", "tofu"] %>
+	</div>
+
+	<div>
+		<%= order.label :cheese, "Cheese" %>
+		<%= order.check_box :cheese %>
+	</div>
+
+	<div>
+		<%= order.label :cheese, "Cheese" %>
+		<%= order.check_box :cheese %>
+	</div>
+
+	<div>
+		<%= order.label :sour_cream, "Sour Cream" %>
+		<%= order.check_box :sour_cream %>
+	</div>
+
+	<div>
+		<%= order.label :fresh_tomato_salsa, "Fresh Tomato Salsa" %>
+		<%= order.check_box :fresh_tomato_salsa %>
+	</div>
+
+	<div>
+		<%= order.label :fajita_veggies, "Fajita Veggies" %>
+		<%= order.check_box :fajita_veggies %>
+	</div>
+
+	<div>
+		<%= order.label :beans, "Beans" %>
+		<%= order.check_box :beans %>
+	</div>
+
+	<div>
+		<%= order.label :rice, "rice" %>
+		<%= order.check_box :rice %>
+	</div>
+	
+	<% end %>

@@ -1,0 +1,40 @@
+<h1>Place Your Order!</h1>
+<table>
+	<thead>
+		<tr>
+			<th>Type</th>
+			<th>PROTEIN</th>
+			<th>BEANS</th>
+			<th>RICE</th>
+			<th>Fresh TOMATO SALSA</th>
+			<th>FAJITA VEGGIES</th>
+		</tr>
+	</thead>
+	<tbody> 
+		<% @orders.each do |order| %>
+			<tr>
+				<td><%= order.orderstyle %></td>
+				<td><%= order.protein %></td>
+				<td><%= order.rice ? 'Yes' : 'No'%></td>
+				<td><%= order.beans ? 'Yes' : 'No'%></td>
+				<td><%= order.cheese ? 'Yes' : 'No' %></td>
+				<td><%= order.sour_cream ? 'Yes' : 'No' %></td>
+				<td><%= order.fresh_tomato_salsa ? 'Yes' : 'No' %></td>
+				<td><%= order.fajita_veggies ? 'Yes' : 'No' %></td>
+				<td><%= link_to 'Edit', id: order,  action: "edit" %></td>
+			</tr>
+
+		<% end %>
+	</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
