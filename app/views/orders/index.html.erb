@@ -21,7 +21,7 @@
 				<td><%= order.sour_cream ? 'Yes' : 'No' %></td>
 				<td><%= order.fresh_tomato_salsa ? 'Yes' : 'No' %></td>
 				<td><%= order.fajita_veggies ? 'Yes' : 'No' %></td>
-				<td><%= link_to 'Edit', id: order,  action: "edit" %></td>
+				<td><%= link_to 'Edit', edit_order_path(order), action: 'edit' %></td>
 			</tr>
 
 		<% end %>

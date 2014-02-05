@@ -2,7 +2,9 @@ Burrito::Application.routes.draw do
   get 'orders' => 'orders#index'
   get 'orders/new' => 'orders#new'
   post 'orders' => 'orders#create'
-  get 'orders/:id/edit' => 'orders#edit', :as => :burrito_path
+  get 'orders/:id/edit' => 'orders#edit', :as => :edit_order
+  patch 'orders/:id' => 'orders#update', :as => :order
+   
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -22,6 +22,16 @@ class OrdersController < ApplicationController
 		@order = Order.find(params[:id])
 	end
 
+   def update
+  @order = Order.find(params[:id])
+  if @order.update(order_params)
+    redirect_to action: "index"
+  else
+    render action: "new"
+  end
+end
+
+
 
 
 	private
