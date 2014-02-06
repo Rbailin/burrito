@@ -1,0 +1,56 @@
+<h1>You Order</h1>
+
+
+<div>
+	<h3>NAME</h3>
+	<%= @order.name %>
+</div>
+
+<div>
+	<h3>TYPE</h3>
+	<%= @order.orderstyle %>
+</div>
+
+<div>
+	<h3>PROTEIN</h3>
+	<%= @order.protein %>
+</div>
+
+<div>
+	<h3>BEANS</h3>
+	<%= @order.beans ? 'Yes' : 'No' %>
+</div>
+
+<div>
+	<h3>RICE</h3>
+	<%= @order.rice ? 'Yes' : 'No' %>
+</div>
+
+<div>
+	<h3>FAJITA VEGGIES</h3>
+	<%= @order.fajita_veggies ? 'Yes' : 'No' %>
+</div>
+
+<div>
+	<h3>FRESH TOMATO SALSA</h3>
+	<%= @order.fresh_tomato_salsa ? 'Yes' : 'No' %>
+</div>
+
+<div>
+	<h3>SOUR CREAM</h3>
+	<%= @order.sour_cream ? 'Yes' : 'No' %>
+</div>
+
+<div>
+	<h3>CHEESE</h3>
+	<%= @order.cheese ? 'Yes' : 'No' %>
+</div>
+
+<br/>
+<br/> 
+<br/>  
+<br/> 
+	<%=link_to "Back", orders_path, action: "index" %>
+
+
+

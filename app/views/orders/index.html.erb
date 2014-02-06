@@ -2,6 +2,7 @@
 <table>
 	<thead>
 		<tr>
+			<th>NAME</th>
 			<th>Type</th>
 			<th>PROTEIN</th>
 			<th>BEANS</th>
@@ -13,6 +14,7 @@
 	<tbody> 
 		<% @orders.each do |order| %>
 			<tr>
+				<td><%= order.name %></td>
 				<td><%= order.orderstyle %></td>
 				<td><%= order.protein %></td>
 				<td><%= order.rice ? 'Yes' : 'No'%></td>
@@ -22,15 +24,16 @@
 				<td><%= order.fresh_tomato_salsa ? 'Yes' : 'No' %></td>
 				<td><%= order.fajita_veggies ? 'Yes' : 'No' %></td>
 				<td><%= link_to 'Edit', edit_order_path(order), action: 'edit' %></td>
+				<td><%= link_to 'Delete', order_path(order), method: :delete %></td>
+				<td><%= link_to 'Show', order_path(order) %></td>
+
 			</tr>
 
 		<% end %>
 	</tbody>
 </table>
 
-
-
-
+<%= link_to 'New', new_order_path, action: "new" %>
 
 
 

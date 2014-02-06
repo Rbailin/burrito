@@ -18,6 +18,12 @@ class OrdersController < ApplicationController
 		end
 	end
 
+	def show
+		@order = Order.find(params[:id])
+	end
+
+
+
 	def edit
 		@order = Order.find(params[:id])
 	end
@@ -31,13 +37,17 @@ class OrdersController < ApplicationController
   end
 end
 
-
+def destroy
+	@order = Order.find(params[:id])
+	@order.destroy
+	redirect_to action: "index"
+end
 
 
 	private
 	def order_params
 		params.require(:order).permit(
-			:orderstyle, :protein, :beans, :rice, :fajita_veggies, :fresh_tomato_salsa, :cheese, :sour_cream)
+			:name, :orderstyle, :protein, :beans, :rice, :fajita_veggies, :fresh_tomato_salsa, :cheese, :sour_cream)
 	end
 
 end

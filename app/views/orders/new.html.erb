@@ -3,6 +3,12 @@
 <%= form_for @order do |order| %>
 
 	<div>
+		<%= order.label :name, "Name" %>
+		<%= order.text_field :name %>
+	</div>
+
+
+	<div>
 		<%= order.label :orderstyle, "Order Style" %>
 		<%= order.select :orderstyle, ["burrito", "salad", "tacos", "bowl"] %>
 	</div>
@@ -47,9 +53,15 @@
 		<%= order.check_box :rice %>
 	</div>
 
-
-	
-
 <%=order.submit %>
 
 	<% end %>
+	<br/>
+	<br/>
+	<br/>
+
+	<%=link_to "Back", orders_path, action: "index" %>
+
+
+
+

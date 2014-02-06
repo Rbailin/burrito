@@ -1,5 +1,6 @@
 class Order
   include Mongoid::Document
+  field :name, type: String
   field :orderstyle, type: String
   field :protein, type: String
   field :beans, type: Mongoid::Boolean
@@ -8,4 +9,7 @@ class Order
   field :fresh_tomato_salsa, type: Mongoid::Boolean
   field :sour_cream, type: Mongoid::Boolean
   field :cheese, type: Mongoid::Boolean
+
 end
+
+
