@@ -10,11 +10,12 @@ class User
   field :salt, type: String
   field :hashed_password, type: String
 
+ def authenticated? pwd
+ 	self.hashed_password == 
+ 	BCrypt::Engine.hash_secret(pwd, self.salt)
+end
 
  before_save :hash_stuff
-
-
-
 
  private
  def hash_stuff

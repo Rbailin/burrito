@@ -11,7 +11,11 @@ Burrito::Application.routes.draw do
   get 'users' => 'users#index', :as => :users
   get 'users/new' => 'users#new', :as => :new_user
   post 'users' => 'users#create'
-   
+
+
+  get '/logins' => 'logins#new', :as => :new_login
+  post '/logins' => 'logins#create'
+  delete '/logins' => 'logins#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
