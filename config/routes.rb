@@ -1,4 +1,5 @@
 Burrito::Application.routes.draw do
+
   get 'orders' => 'orders#index'
   get 'orders/new' => 'orders#new', :as => :new_order
   post 'orders' => 'orders#create'
@@ -6,6 +7,10 @@ Burrito::Application.routes.draw do
   patch 'orders/:id' => 'orders#update', :as => :order
   delete 'orders/:id' => 'orders#destroy'
   get 'orders/:id' => 'orders#show'
+
+  get 'users' => 'users#index', :as => :users
+  get 'users/new' => 'users#new', :as => :new_user
+  post 'users' => 'users#create'
    
 
   # The priority is based upon order of creation: first created -> highest priority.
